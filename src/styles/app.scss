@@ -1,0 +1,243 @@
+// 通用
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(to right, rgb(136, 135, 133), rgb(138, 139, 136), #5B5B5B);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+// 圖片樣式
+.image-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // overflow: hidden;
+    background-color: #f0f0f0;
+
+    .image-container {
+        position: relative; 
+        width: 100%; 
+        height: auto; 
+    }
+    
+    .background-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; 
+    }
+    
+    .character {
+        position: absolute; 
+        max-width: 76%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .character1, .character2 {
+        bottom: 0;
+        left: 0;
+        transform: scale(1); 
+    }
+    
+    .LeftEye {
+        width: 3%;
+        position: absolute;
+        left: 40.5%;
+        bottom: 59%;
+        transition: left 0.3s ease-in-out; 
+    }
+    
+    .LeftEye:hover {
+        left: 40.2%; 
+    }
+    
+    .RightEye {
+        width: 2.5%;
+        position: absolute;
+        right: 46.5%;
+        bottom: 59.8%;
+        transition: right 0.3s ease-in-out; 
+    }
+    
+    .RightEye:hover {
+        right: 46.8%; 
+    }
+    
+    .Logo {
+        position: absolute;
+        right: -12.5%;
+        bottom: 0;
+        transform: scale(0.5); 
+        animation: scaleRotate 1.5s infinite;
+    }
+    
+    /* 縮放旋轉 */
+    @keyframes scaleRotate {
+        0% {
+            transform: scale(0.1) rotate(0deg);
+        }
+        // 25% {
+        //     transform: scale(0.3) rotate(90deg);
+        // }
+        50% {
+            transform: scale(0.3) rotate(180deg);
+        }
+        // 75% {
+        //     transform: scale(0.5) rotate(270deg);
+        // }
+        100% {
+            transform: scale(0.5) rotate(360deg);
+        }
+    }
+}
+
+// 表單樣式
+.form-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 98%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    #compTitle {
+        margin-bottom: 10px;
+        color: #4D4D4D;
+        font-weight: bolder !important;
+        font-size: 2rem;
+    }
+
+    #compTitle label {
+        border-left: solid 5px #F19E4D; 
+    }
+
+    h5 {
+        font-weight: bolder !important;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+
+        label {
+            position: relative;
+            background-color: #ffffff;
+            left: 5px;
+            top: 13px;
+        }
+
+        input,
+        select,
+        textarea {
+            // width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    }
+
+    .hover-effect {
+        border-radius: 3%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .hover-effect:hover {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3), /* 下 */
+                    0px -5px 10px rgba(0, 0, 0, 0.3), /* 上 */
+                    5px 0px 10px rgba(0, 0, 0, 0.3), /* 右 */
+                    -5px 0px 10px rgba(0, 0, 0, 0.3); /* 左 */
+      }
+
+    .btn-link {
+        color: #F19E4D;
+        font-weight: bolder;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: #999999 !important;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #999999;
+        }
+    }
+
+    .btn {
+      transition: transform 0.3s ease-in-out; /* 平滑过渡 */
+    }
+
+    .bg-primary {
+      background-color: #F19E4D !important;
+      width: 30px;
+      height: 5px;
+      border-Radius: 2px !important;
+    }
+
+    .bg-secondary {
+      width: 5px;
+      height: 5px;
+      border-Radius: 2px !important;
+    }
+    
+    /* 滑动按钮的特效 */
+    .slide-btn {
+      position: relative;
+    }
+
+    .mx-1,
+    .btn-light {
+        border-radius: 50%;
+    }
+
+    .btn-light {
+        --bs-btn-bg: #FFFFFF;
+    }
+
+    .btn-primary {
+        --bs-btn-bg: #CCCCCC;
+        --bs-btn-hover-bg: #CCCCCC;
+        --bs-btn-border-color: #CCCCCC;
+        --bs-btn-hover-border-color: #CCCCCC;
+    }
+
+    .modal-dialog {
+        top: 10%;
+        
+        .modal-body {
+            .job-description {
+                height: 15rem;
+                overflow-y: auto;
+            }
+    
+            h1,h2, ul, li, p {
+                font-weight: 200;
+                color: #747474;
+                font-size: .9rem;
+            }
+        }
+    }
+}
