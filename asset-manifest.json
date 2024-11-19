@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/web-frontend-exam-main/static/css/main.5a66bab4.css",
+    "main.js": "/web-frontend-exam-main/static/js/main.be9bc110.js",
+    "static/media/Background-01.png": "/web-frontend-exam-main/static/media/Background-01.d64bb2dbe23363706b3b.png",
+    "static/media/Character-01.png": "/web-frontend-exam-main/static/media/Character-01.ed85741e540a3b3a8479.png",
+    "static/media/Logo-01.png": "/web-frontend-exam-main/static/media/Logo-01.e21145fadd766dde165c.png",
+    "static/media/bootstrap-icons.woff?": "/web-frontend-exam-main/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/web-frontend-exam-main/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/Character-02.png": "/web-frontend-exam-main/static/media/Character-02.f700467ad4d2569a5f6e.png",
+    "index.html": "/web-frontend-exam-main/index.html",
+    "main.5a66bab4.css.map": "/web-frontend-exam-main/static/css/main.5a66bab4.css.map",
+    "main.be9bc110.js.map": "/web-frontend-exam-main/static/js/main.be9bc110.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a66bab4.css",
+    "static/js/main.be9bc110.js"
+  ]
+}
