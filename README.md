@@ -72,3 +72,7 @@
 ## Github Repositories Link
 
 <https://github.com/Anida-Huang/web-frontend-exam-main>
+
+## Github Page Link
+
+<https://anida-huang.github.io/web-frontend-exam-main/>
