@@ -105,15 +105,15 @@
 3. 資料與樣式
 
    【constants】
-      (1) 【jobList】：提供工作職缺詳情資訊
-      (2) 【educationList】：提供教育程度資訊
-      (3) 【educationList】：提供教育程度資訊
+      (1) 【jobList.js】：提供工作職缺詳情資訊
+      (2) 【educationList.js】：提供教育程度資訊
+      (3) 【educationList.js】：提供教育程度資訊
 
    【styles】
-      (1) 【app】：使用 Sass 定義樣式與排版，並提供 RWD 樣式讓不同裝置都能使用
+      (1) 【app.scss】：使用 Sass 定義樣式與排版，並提供 RWD 樣式讓不同裝置都能使用
 
    【img】
-      (1) 包含應用所需的背景圖片
+      (1) 包含網頁所需的背景圖片
 ```
 
 ```
