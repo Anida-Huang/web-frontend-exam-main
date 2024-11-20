@@ -50,8 +50,6 @@ const SearchForm = () => {
   const handleSearch = (e) => {
     // 防止表單提交刷新頁面
     e.preventDefault();
-    // 當前分頁預設為第一頁
-    setCurrentPage(1);
     // 執行透過符合篩選條件的值找出相對應的工作項目
     setFilteredJobs(
       // 工作資訊文件過濾陣列中符合條件的值
@@ -97,8 +95,28 @@ const SearchForm = () => {
   const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
   // 定義函數返回當前頁需要的職缺數
   const currentJobs = filteredJobs.slice((currentPage - 1) * jobsPerPage, currentPage * jobsPerPage);
+
+  // 檢查 currentPage 和 jobsPerPage 是否有更新
+  useEffect(() => {
+    console.log("currentPage: ", currentPage);
+    console.log("jobsPerPage: ", jobsPerPage);
+    console.log("FL: ", filteredJobs.length);
+  }, [currentPage, jobsPerPage, filteredJobs.length]);
+
+
   // 計算函數確保圖片數量，計算分頁顯示的圖片群組數量
   const totalPhotoGroups = selectedJob?.companyPhoto ? Math.ceil(selectedJob.companyPhoto.length / 4) : 0;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPhotoGroup((prev) => {
+        return prev === totalPhotoGroups - 1 ? 0 : prev + 1; // 循環顯示
+      });
+    }, 3000); // 每 3 秒自動滑動一次
+
+    return () => clearInterval(interval); // 清除定時器
+  }, [selectedJob?.companyPhoto.length, totalPhotoGroups]);
+
 
   return (
     <div className="form-container d-flex flex-warp justify-content-center align-items-center mt-0">
